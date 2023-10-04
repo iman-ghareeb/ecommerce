@@ -159,13 +159,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
 
                     customButton(
-                        onPressed: ()async{
-                      await DioHelper.postData().then((value){
-                        print('value = $value');
-                      }).catchError((error){
-                        print(error.response.data['message']);
-                      });
-                    }
+                        onPressed: (){}
                     , title: 'sign up'),
                     const SizedBox(
                       height: 10,

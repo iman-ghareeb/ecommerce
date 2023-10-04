@@ -7,13 +7,14 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constant/colors.dart';
+import 'view/test_screen.dart';
 
 late SharedPreferences sharedPreferences ;
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   sharedPreferences = await SharedPreferences.getInstance();
-  DioHelper.initDio();
-  runApp(const MyApp());
+  DioHelper.init();
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -52,8 +53,8 @@ class MyApp extends StatelessWidget {
         )
       ),
 
-      getPages:getPages,
-      home: SignUpScreen(),
+      //getPages:getPages,
+      home: TestScreen(),
 
     );
   }
